@@ -8,10 +8,10 @@ angular.module('Fundoo-Directives', []).directive('imageLoader', [function() {
       backgroundImage: '@'
     },
     link: function(scope, element, attrs) {
-      console.log("Inside Image Directive : ", scope);
-      element.css("background-image", "url(" + scope.loadingIndicatorImage + ")");
+      console.log("Inside Image Directive");
+      element.css("background", "url(" + scope.loadingIndicatorImage + ") center no-repeat");
       element.bind("load", function() {
-         console.log("element is : ", element);
+         console.log("Loaded Image");
          element.css("background-image", "");
       });
 
